@@ -1,0 +1,44 @@
+.container {
+    width: 100vw;
+    height: 7.42vw;
+    color: #808080;
+    font-size: 1.34vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 7vw;
+}
+
+.navbar {
+    width: 25.42vw;
+    display: flex;
+    gap: 4vw;
+}
+
+.searchBar {
+    width: 18.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2vw;
+}
+
+.searchInput {
+    width: 14.33vw;
+    height: 2.67vw;
+    border: 0.083vw solid #d9d9d9;
+    border-radius: 0.166vw;
+}
+
+@keyframes mymove {
+    from {left: -2vw;}
+    to {left: 0vw;}
+  }
+
+.searchIcon {
+    width: 2.17vw;
+}
+
+.searchIcon:hover {
+    cursor: pointer;
+}

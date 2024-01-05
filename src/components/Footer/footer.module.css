@@ -1,0 +1,19 @@
+.container {
+    width: 100vw;
+    height: 16.17vw;
+    background-color: #0000FF;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    /* padding: 4.5vw 10vw; */
+}
+
+.footerText {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
