@@ -1,0 +1,31 @@
+.container {
+    background: linear-gradient(0deg, rgba(1,1,255,1) 0%, rgba(255,255,255,1) 100%);
+    min-width: 22.5vw;
+    height: 33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    border-radius: 2vw;
+    padding: 0 1.5vw;
+    box-shadow: 0 1vw 0.575vw rgba(0, 0, 0, 0.24);
+    color: #fff;
+}
+
+.image {
+    color: red;
+    font-size: 8vw;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 1.34vw;
+    font-weight: 700;
+}
+
+.description {
+    text-align: center;
+    font-size: 1vw;
+    line-height: 120%;
+}
