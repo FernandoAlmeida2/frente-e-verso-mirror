@@ -51,14 +51,38 @@
   padding: 5vw 3vw;
 }
 
-.content {
-  display: flex;
-  gap: 1.5vw;
-  overflow-x: hidden;
+.showSlider {
+  position: relative;
+  width: 80vw;
+  height: 33vw;
 }
+
+.content {
+  position: relative;
+  height: 35vw;
+  display: inline-flex;
+  gap: 1.5vw;
+  flex-wrap:nowrap;
+  overflow-x: scroll;
+}
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.content {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
 
 .arrow {
   width: 3.91vw;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  scale: 120%;
 }
 
 

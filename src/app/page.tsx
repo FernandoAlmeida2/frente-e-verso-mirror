@@ -3,8 +3,31 @@
 import TechNote from "@/components/TechNote/TechNote";
 import techNotes from "./lib/placeholder-data";
 import styles from "./page.module.css";
+import { useState } from "react";
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  function scrollToLeft() {
+    /* if (contentPointer > 0) {
+      setContentPointer((prev) => prev - 2 * contentWidth);
+    } */
+    if (currentIndex <= 0) return;
+
+    if (techNotes.length - currentIndex < 3) setCurrentIndex(0);
+    else setCurrentIndex((prev) => prev - 3);
+  }
+
+  function scrollToRight() {
+    /* if (contentLength * contentWidth < contentPointer) {
+      setContentPointer((prev) => prev + 2 * contentWidth);
+    } */
+    if (currentIndex >= techNotes.length) return;
+
+    if (techNotes.length - currentIndex < 3) setCurrentIndex(techNotes.length);
+    else setCurrentIndex((prev) => prev + 3);
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.presentation}>
@@ -30,16 +53,23 @@ export default function Home() {
           src="/left_arrow.svg"
           alt="Seta esquerda"
           className={styles.arrow}
+          onClick={() => scrollToLeft()}
         />
-        <div className={styles.content} style={{backgroundColor: pickColor}}>
+        <div className={styles.content}>
           {techNotes.map((techNote, index) => (
-            <TechNote techNote={techNote} key={index} />
+            <TechNote
+              key={index}
+              techNote={techNote}
+              currentIndex={currentIndex}
+              noteIndex={index}
+            />
           ))}
         </div>
         <img
           src="/right_arrow.svg"
           alt="Seta direita"
           className={styles.arrow}
+          onClick={() => scrollToRight()}
         />
       </div>
     </main>

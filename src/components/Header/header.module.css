@@ -1,12 +1,12 @@
 .container {
-    width: 100vw;
+    max-width: 100vw;
     height: 7.42vw;
     color: #808080;
     font-size: 1.34vw;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: 7vw;
+    justify-content: center;
+    position: relative;
 }
 
 .navbar {
@@ -16,7 +16,11 @@
 }
 
 .searchBar {
+    position: absolute;
+    right: 7vw;
+    top: 2.375vw;
     width: 18.5vw;
+    height: 2.67vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
