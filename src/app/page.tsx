@@ -9,9 +9,6 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   function scrollToLeft() {
-    /* if (contentPointer > 0) {
-      setContentPointer((prev) => prev - 2 * contentWidth);
-    } */
     if (currentIndex <= 0) return;
 
     if (techNotes.length - currentIndex < 3) setCurrentIndex(0);
@@ -19,9 +16,6 @@ export default function Home() {
   }
 
   function scrollToRight() {
-    /* if (contentLength * contentWidth < contentPointer) {
-      setContentPointer((prev) => prev + 2 * contentWidth);
-    } */
     if (currentIndex >= techNotes.length) return;
 
     if (techNotes.length - currentIndex < 3) setCurrentIndex(techNotes.length);

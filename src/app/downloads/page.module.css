@@ -1,0 +1,38 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5vw 0;
+  }
+  
+  .logo {
+    width: 22.9vw;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+    align-items: center;
+    text-align: center;
+  }
+
+  .reportsList {
+    max-width: 47vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.8vw;
+  }
+
+  .reportItem {
+    width: 22.5vw;
+    height: 2.92vw;
+    border-radius: 1.17vw;
+    font-size: 1.33vw;
+    font-weight: 700;
+    color: #fff;
+    background-color: #FF3B21;
+    border: none;
+  }

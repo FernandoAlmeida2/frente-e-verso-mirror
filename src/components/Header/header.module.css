@@ -12,6 +12,7 @@
 .navbar {
     width: 25.42vw;
     display: flex;
+    justify-content: center;
     gap: 4vw;
 }
 
