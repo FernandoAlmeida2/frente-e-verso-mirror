@@ -27,7 +27,7 @@ export default function Home() {
       <div className={styles.presentation}>
         <img
           className={styles.logo}
-          src="/logo.svg"
+          src="/images/logo.svg"
           alt="Logo Frente e Verso"
         />
         <div className={styles.description}>
@@ -44,7 +44,7 @@ export default function Home() {
 
       <div className={styles.contentContainer}>
         <img
-          src="/left_arrow.svg"
+          src="/images/left_arrow.svg"
           alt="Seta esquerda"
           className={styles.arrow}
           onClick={() => scrollToLeft()}
@@ -60,7 +60,7 @@ export default function Home() {
           ))}
         </div>
         <img
-          src="/right_arrow.svg"
+          src="/images/right_arrow.svg"
           alt="Seta direita"
           className={styles.arrow}
           onClick={() => scrollToRight()}

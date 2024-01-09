@@ -10,14 +10,14 @@ export default function Header() {
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
-        <Link href="\">Início</Link>
+        <Link href="/">Início</Link>
         <div>Sobre</div>
-        <Link href="\downloads">Downloads</Link>
+        <Link href="/downloads">Downloads</Link>
       </div>
       <div className={styles.searchBar}>
         {toggleSearch && <input className={styles.searchInput} />}
         <img
-          src="search.svg"
+          src="/images/search.svg"
           alt="ícone de busca"
           onClick={() => setToggleSearch(!toggleSearch)}
           className={styles.searchIcon}

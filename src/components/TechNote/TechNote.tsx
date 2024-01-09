@@ -3,6 +3,7 @@
 import { TechnicalNote } from "@/app/lib/definitions";
 import styles from "./note.module.css";
 import { useRef } from "react";
+import Link from "next/link";
 
 type Props = {
   techNote: TechnicalNote;
@@ -20,7 +21,7 @@ export default function TechNote({ techNote, noteIndex, currentIndex }: Props) {
 
   return (
     <div className={styles.container} ref={noteRef}>
-      <div className={styles.image}>{techNote.imgPath}</div>
+      <Link className={styles.image} href={`/report?id=${techNote.id}`}>{techNote.imgPath}</Link>
       <div className={styles.title}>{techNote.title}</div>
       <div className={styles.description}>{techNote.description}</div>
       <div className={styles.info}>

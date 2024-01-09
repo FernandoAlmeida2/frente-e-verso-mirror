@@ -1,0 +1,39 @@
+.main {
+    display: flex;
+    gap: 2vw;
+    min-height: 100vh;
+    padding: 3vw 5vw 5vw 8vw;
+  }
+
+  .sidebar {
+    width: 22.5vw;
+    height: 14.33vw;
+    background-color: #0000FF;
+    border-radius: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    padding: 3.5vw;
+  }
+
+  .report {
+    width: 58vw;
+    min-height: 100vh;
+  }
+
+  .shareText {
+    font-size: 1vw;
+    font-weight: 700;
+    padding: 3vw 0 1vw 0;
+  }
+
+  .iconsList {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  
+  .icon {
+    width: 2.375vw;
+  }

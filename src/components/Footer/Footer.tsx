@@ -13,10 +13,10 @@ export default function Footer() {
       </div>
       <div className={styles.logos}>
         <div className={styles.creators}>
-          <img src="iplanfor.png" alt="Iplanfor" />
-          <img src="prefeitura.png" alt="Prefeitura" />
+          <img src="/images/iplanfor.png" alt="Iplanfor" />
+          <img src="/images/prefeitura.png" alt="Prefeitura" />
         </div>
-        <img src="colaboradores.png" alt="Colaboradores" />
+        <img src="/images/colaboradores.png" alt="Colaboradores" />
       </div>
     </footer>
   );

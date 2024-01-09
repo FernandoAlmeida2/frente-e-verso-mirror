@@ -1,0 +1,12 @@
+.sidebarItem {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    color: #fff;
+    font-size: 1.33vw;
+    font-weight: 700;
+}
+
+.downIcon {
+    width: 1.58vw;
+}
