@@ -1,26 +1,12 @@
-"use client";
+"use client"
 
 import TechNote from "@/components/TechNote/TechNote";
 import techNotes from "./lib/placeholder-data";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useIndex } from "@/hooks/useIndex";
 
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  function scrollToLeft() {
-    if (currentIndex <= 0) return;
-
-    if (techNotes.length - currentIndex < 3) setCurrentIndex(0);
-    else setCurrentIndex((prev) => prev - 3);
-  }
-
-  function scrollToRight() {
-    if (currentIndex >= techNotes.length) return;
-
-    if (techNotes.length - currentIndex < 3) setCurrentIndex(techNotes.length);
-    else setCurrentIndex((prev) => prev + 3);
-  }
+  const currentIndexState = useIndex();
 
   return (
     <main className={styles.main}>
@@ -32,13 +18,9 @@ export default function Home() {
         />
         <div className={styles.description}>
           <div>
-            Nonononon onononono nononono nononononono no nono nononono
-            <br />
-            nononononononononono. Nono nononononono nonononononono
-            <br />
-            nononono no nonononononono no nono nonononono nono.
+            Nonononon onononono nononono nononononono no nono nononono nononononononononono. Nono nononononono nonononononono nononono no nonononononono no nono nonononono nono.
           </div>
-          <button className={styles.moreButton}>Saiba mais</button>
+          <button className={styles.moreButton}>Saiba Mais</button>
         </div>
       </div>
 
@@ -47,14 +29,14 @@ export default function Home() {
           src="/images/left_arrow.svg"
           alt="Seta esquerda"
           className={styles.arrow}
-          onClick={() => scrollToLeft()}
+          onClick={() => currentIndexState.scrollToLeft()}
         />
         <div className={styles.content}>
           {techNotes.map((techNote, index) => (
             <TechNote
               key={index}
               techNote={techNote}
-              currentIndex={currentIndex}
+              currentIndex={currentIndexState.currentIndex}
               noteIndex={index}
             />
           ))}
@@ -63,7 +45,7 @@ export default function Home() {
           src="/images/right_arrow.svg"
           alt="Seta direita"
           className={styles.arrow}
-          onClick={() => scrollToRight()}
+          onClick={() => currentIndexState.scrollToRight()}
         />
       </div>
     </main>

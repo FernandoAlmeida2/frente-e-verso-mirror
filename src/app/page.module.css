@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 5vw 0;
@@ -12,6 +11,7 @@
 }
 
 .presentation {
+  width: 50vw;
   display: flex;
   flex-direction: column;
   gap: 2vw;
@@ -21,6 +21,7 @@
 
 .description {
   font-size: 1.5vw;
+  font-weight: 300;
   line-height: 120.7%;
   display: flex;
   flex-direction: column;
@@ -41,6 +42,10 @@
 
 .moreButton:hover {
   cursor: pointer;
+}
+
+.searchInput {
+  display: none;
 }
 
 .contentContainer {
@@ -85,83 +90,53 @@
   scale: 120%;
 }
 
-
 /* Mobile */
-/* @media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+@media (max-width: 700px) {
+
+  .main {
+    background: linear-gradient(0deg, rgba(255,59,33,1) 0%, rgba(255,255,255,1) 100%);
+    padding: 10vw 0;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
+  .contentContainer {
+    display: none;
   }
 
-  .card {
-    padding: 1rem 2.5rem;
+  .logo {
+    width: 45.3vw;
   }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
+  
+  .presentation {
+    gap: 8vw;
+    width: 69vw;
   }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
+  
   .description {
-    font-size: 0.8rem;
+    font-size: 3vw;
+    gap: 3vw;
+  }
+  
+  .moreButton {
+    width: 16vw;
+    height: 5vw;
+    border-radius: 2.5vw;
+    font-size: 2.4vw;
   }
 
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
+  .serachResponsive {
     display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
+    flex-direction: column;
     align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
   }
 
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
+  .searchInput {
+    width: 14.33vw;
+    height: 2.67vw;
+    border: 0.083vw solid #d9d9d9;
+    border-radius: 0.166vw;
   }
-} */
+
+}
 
 /* Tablet and Smaller Desktop */
 /* @media (min-width: 701px) and (max-width: 1120px) {

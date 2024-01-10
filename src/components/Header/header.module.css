@@ -1,49 +1,60 @@
 .container {
-    max-width: 100vw;
-    height: 7.42vw;
-    color: #808080;
-    font-size: 1.34vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  max-width: 100vw;
+  height: 7.42vw;
+  color: #808080;
+  font-size: 1.34vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .navbar {
-    width: 25.42vw;
-    display: flex;
-    justify-content: center;
-    gap: 4vw;
+  width: 25.42vw;
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
 }
 
 .searchBar {
-    position: absolute;
-    right: 7vw;
-    top: 2.375vw;
-    width: 18.5vw;
-    height: 2.67vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 2vw;
+  position: absolute;
+  right: 7vw;
+  top: 2.375vw;
+  width: 18.5vw;
+  height: 2.67vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2vw;
 }
 
 .searchInput {
-    width: 14.33vw;
-    height: 2.67vw;
-    border: 0.083vw solid #d9d9d9;
-    border-radius: 0.166vw;
+  width: 14.33vw;
+  height: 2.67vw;
+  border: 0.083vw solid #d9d9d9;
+  border-radius: 0.166vw;
 }
 
 @keyframes mymove {
-    from {left: -2vw;}
-    to {left: 0vw;}
+  from {
+    left: -2vw;
   }
+  to {
+    left: 0vw;
+  }
+}
 
 .searchIcon {
-    width: 2.17vw;
+  width: 2.17vw;
 }
 
 .searchIcon:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .container {
+    display: none;
+  }
 }
