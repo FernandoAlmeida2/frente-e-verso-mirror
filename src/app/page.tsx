@@ -24,16 +24,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.searchResponsive}>
+      {/* <div className={styles.searchResponsive}>
         <input className={styles.searchInput} />
         <button className={styles.searchButton}>Pesquisar</button>
-      </div>
+      </div> */}
 
       <div className={styles.contentContainer}>
         <img
           src="/images/left_arrow.svg"
           alt="Seta esquerda"
-          className={styles.arrow}
+          className={styles.arrowLeft}
           onClick={() => currentIndexState.scrollToLeft()}
         />
         <div className={styles.content}>
@@ -49,7 +49,7 @@ export default function Home() {
         <img
           src="/images/right_arrow.svg"
           alt="Seta direita"
-          className={styles.arrow}
+          className={styles.arrowRight}
           onClick={() => currentIndexState.scrollToRight()}
         />
       </div>

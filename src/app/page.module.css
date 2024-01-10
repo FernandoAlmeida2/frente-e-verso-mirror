@@ -56,12 +56,6 @@
   padding: 5vw 1vw;
 }
 
-.showSlider {
-  position: relative;
-  width: 80vw;
-  height: 33vw;
-}
-
 .content {
   position: relative;
   height: 35vw;
@@ -81,11 +75,20 @@
   scrollbar-width: none;  /* Firefox */
 } 
 
-.arrow {
+.arrowLeft {
   width: 3.91vw;
 }
 
-.arrow:hover {
+.arrowRight {
+  width: 3.91vw;
+}
+
+.arrowLeft:hover {
+  cursor: pointer;
+  scale: 120%;
+}
+
+.arrowRight:hover {
   cursor: pointer;
   scale: 120%;
 }
@@ -94,33 +97,53 @@
 @media (max-width: 700px) {
 
   .main {
-    background: linear-gradient(0deg, rgba(255,59,33,1) 0%, rgba(255,255,255,1) 100%);
+    /* background: linear-gradient(0deg, rgba(255,59,33,1) 0%, rgba(255,255,255,1) 100%); */
     padding: 10vw 0;
   }
 
-  .contentContainer {
-    display: none;
-  }
-
   .logo {
-    width: 45.3vw;
+    width: 42.9vw;
   }
   
   .presentation {
     gap: 8vw;
-    width: 69vw;
+    width: 72vw;
   }
   
   .description {
-    font-size: 3vw;
+    font-size: 3.2vw;
     gap: 3vw;
   }
   
   .moreButton {
-    width: 16vw;
-    height: 5vw;
-    border-radius: 2.5vw;
-    font-size: 2.4vw;
+    width: 22.4vw;
+    height: 6.7vw;
+    border-radius: 3.73vw;
+    font-size: 3.2vw;
+  }
+
+  .contentContainer {
+    padding: 30vw 6vw;
+  }
+
+  .content {
+    position: relative;
+    height: 105vw;
+    gap: 10.9vw;
+    flex-wrap:nowrap;
+    overflow-x: scroll;
+  }
+  
+  .arrowLeft {
+    z-index: 1000;
+    width: 12.5vw;
+    margin-right: -10vw;
+  }
+
+  .arrowRight {
+    z-index: 1000;
+    width: 12.5vw;
+    margin-left: -10vw;
   }
 
   .searchResponsive {
