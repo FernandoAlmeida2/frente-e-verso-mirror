@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -17,6 +18,20 @@ export default function Footer() {
           <img src="/images/prefeitura.png" alt="Prefeitura" />
         </div>
         <img src="/images/colaboradores.png" alt="Colaboradores" />
+      </div>
+      <div className={styles.footerResponsive}>
+        <Link href="/" className={styles.footerIcon}>
+          <img src="/images/inicio.svg" alt="Início" />
+          Início
+        </Link>
+        <div className={styles.footerIcon}>
+          <img src="/images/buscar.svg" alt="Buscar" />
+          Buscar
+        </div>
+        <Link href="/downloads" className={styles.footerIcon}>
+          <img src="/images/downloads.svg" alt="Downloads" />
+          Downloads
+        </Link>
       </div>
     </footer>
   );
