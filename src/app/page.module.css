@@ -44,7 +44,7 @@
   cursor: pointer;
 }
 
-.searchInput {
+.searchResponsive {
   display: none;
 }
 
@@ -123,17 +123,30 @@
     font-size: 2.4vw;
   }
 
-  .serachResponsive {
+  .searchResponsive {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2vw;
+    padding-top: 20vw;
   }
 
   .searchInput {
-    width: 14.33vw;
-    height: 2.67vw;
-    border: 0.083vw solid #d9d9d9;
-    border-radius: 0.166vw;
+    width: 39.5vw;
+    height: 5.27vw;
+    border: 0.17vw solid #d9d9d9;
+    border-radius: 0.33vw;
+  }
+
+  .searchButton {
+    width: 16vw;
+    height: 4.45vw;
+    background-color: #0000ff;
+    color: #ffffff;
+    border-radius: 0.33vw;
+    border: none;
+    font-weight: 400;
+    font-size: 2vw;
   }
 
 }
