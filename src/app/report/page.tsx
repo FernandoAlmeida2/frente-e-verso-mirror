@@ -11,6 +11,11 @@ export default function Report() {
   const report = techNotes.filter((note) => note.id === Number(id))[0].pdfName;
   return (
     <main className={styles.main}>
+      <img
+          className={styles.logoResponsive}
+          src="images/logo.svg"
+          alt="Logo Frente e Verso"
+        />
       <aside className={styles.sidebar}>
         <SidebarItem text={"Gráficos do relatório"} pdfName={report} />
         <SidebarItem text={"Códigos utilizados"} pdfName={report} />
