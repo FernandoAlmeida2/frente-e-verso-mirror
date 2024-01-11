@@ -30,12 +30,12 @@ export default function Home() {
       </div> */}
 
       <div className={styles.contentContainer}>
-        <img
+        {currentIndexState.currentIndex !== 0 && <img
           src="/images/left_arrow.svg"
           alt="Seta esquerda"
           className={styles.arrowLeft}
           onClick={() => currentIndexState.scrollToLeft()}
-        />
+        />}
         <div className={styles.content}>
           {techNotes.map((techNote, index) => (
             <TechNote
@@ -46,12 +46,12 @@ export default function Home() {
             />
           ))}
         </div>
-        <img
+        {currentIndexState.currentIndex !== (techNotes.length - 1) && <img
           src="/images/right_arrow.svg"
           alt="Seta direita"
           className={styles.arrowRight}
           onClick={() => currentIndexState.scrollToRight()}
-        />
+        />}
       </div>
     </main>
   );

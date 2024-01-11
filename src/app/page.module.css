@@ -146,6 +146,14 @@
     margin-left: -10vw;
   }
 
+  .arrowLeft:hover {
+    scale: 100%;
+  }
+  
+  .arrowRight:hover {
+    scale: 100%;
+  }
+
   .searchResponsive {
     display: flex;
     flex-direction: column;
