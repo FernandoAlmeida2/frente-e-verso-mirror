@@ -1,7 +1,13 @@
+"use client"
+
 import Link from "next/link";
 import styles from "./footer.module.css";
+import SearchResponsive from "../SearchResponsive/SearchResponsive";
+import { useToggleSearch } from "@/hooks/useToggleSearch";
 
 export default function Footer() {
+  const toggleState = useToggleSearch();
+
   return (
     <footer className={styles.container}>
       <div className={styles.footerText}>
@@ -24,7 +30,7 @@ export default function Footer() {
           <img src="/images/inicio.svg" alt="Início" />
           Início
         </Link>
-        <div className={styles.footerIcon}>
+        <div className={styles.footerIcon} onClick={toggleState.toggle}>
           <img src="/images/buscar.svg" alt="Buscar" />
           Buscar
         </div>
@@ -33,6 +39,7 @@ export default function Footer() {
           Downloads
         </Link>
       </div>
+      {toggleState.toggleSearch && <SearchResponsive toggle={toggleState.toggle} />}
     </footer>
   );
 }

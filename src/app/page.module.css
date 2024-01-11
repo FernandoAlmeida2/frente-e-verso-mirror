@@ -6,10 +6,6 @@
   padding: 5vw 0;
 }
 
-.logo {
-  width: 22.9vw;
-}
-
 .presentation {
   width: 50vw;
   display: flex;
@@ -17,6 +13,10 @@
   gap: 2vw;
   align-items: center;
   text-align: center;
+}
+
+.logo {
+  width: 22.9vw;
 }
 
 .description {
@@ -42,10 +42,6 @@
 
 .moreButton:hover {
   cursor: pointer;
-}
-
-.searchResponsive {
-  display: none;
 }
 
 .contentContainer {
@@ -97,7 +93,6 @@
 @media (max-width: 700px) {
 
   .main {
-    /* background: linear-gradient(0deg, rgba(255,59,33,1) 0%, rgba(255,255,255,1) 100%); */
     padding: 10vw 0;
   }
 
@@ -123,7 +118,7 @@
   }
 
   .contentContainer {
-    padding: 30vw 6vw;
+    padding: 30vw 6vw 6vw 6vw;
   }
 
   .content {
@@ -135,13 +130,13 @@
   }
   
   .arrowLeft {
-    z-index: 1000;
+    z-index: 10;
     width: 12.5vw;
     margin-right: -10vw;
   }
 
   .arrowRight {
-    z-index: 1000;
+    z-index: 10;
     width: 12.5vw;
     margin-left: -10vw;
   }
@@ -153,33 +148,6 @@
   .arrowRight:hover {
     scale: 100%;
   }
-
-  .searchResponsive {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vw;
-    padding-top: 20vw;
-  }
-
-  .searchInput {
-    width: 39.5vw;
-    height: 5.27vw;
-    border: 0.17vw solid #d9d9d9;
-    border-radius: 0.33vw;
-  }
-
-  .searchButton {
-    width: 16vw;
-    height: 4.45vw;
-    background-color: #0000ff;
-    color: #ffffff;
-    border-radius: 0.33vw;
-    border: none;
-    font-weight: 400;
-    font-size: 2vw;
-  }
-
 }
 
 /* Tablet and Smaller Desktop */

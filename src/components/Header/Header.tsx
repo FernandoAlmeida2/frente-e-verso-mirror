@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import styles from "./header.module.css";
 import Link from "next/link";
+import { useToggleSearch } from "@/hooks/useToggleSearch";
 
 export default function Header() {
-  const [toggleSearch, setToggleSearch] = useState(false);
+  const toggleState = useToggleSearch();
 
   return (
     <div className={styles.container}>
@@ -15,11 +15,11 @@ export default function Header() {
         <Link href="/downloads">Downloads</Link>
       </div>
       <div className={styles.searchBar}>
-        {toggleSearch && <input className={styles.searchInput} />}
+        {toggleState.toggleSearch && <input className={styles.searchInput} />}
         <img
           src="/images/search.svg"
           alt="ícone de busca"
-          onClick={() => setToggleSearch(!toggleSearch)}
+          onClick={toggleState.toggle}
           className={styles.searchIcon}
         />
       </div>

@@ -1,0 +1,81 @@
+.container {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 59, 33, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33vw;
+  padding-top: 16.8vw;
+}
+
+.presentation {
+  width: 72vw;
+  display: flex;
+  flex-direction: column;
+  gap: 8vw;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 42.9vw;
+}
+
+.description {
+  font-size: 3.2vw;
+  font-weight: 300;
+  line-height: 120.7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vw;
+}
+
+.moreButton {
+  width: 22.4vw;
+  height: 6.7vw;
+  background-color: #f5624e;
+  color: #ffc2ba;
+  border-radius: 3.73vw;
+  border: none;
+  font-weight: 700;
+  font-size: 3.2vw;
+}
+
+.searchResponsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2vw;
+}
+
+.searchInput {
+  width: 64vw;
+  height: 8.53vw;
+  border: 0.27vw solid #d9d9d9;
+  border-radius: 0.53vw;
+}
+
+.searchButton {
+  width: 25.9vw;
+  height: 7.2vw;
+  background-color: #0000ff;
+  color: #ffffff;
+  border-radius: 0.53vw;
+  border: none;
+  font-weight: 400;
+  font-size: 3.2vw;
+}
+
+.closeIcon {
+    width: 14.93vw;
+}

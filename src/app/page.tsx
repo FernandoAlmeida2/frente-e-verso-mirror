@@ -24,11 +24,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className={styles.searchResponsive}>
-        <input className={styles.searchInput} />
-        <button className={styles.searchButton}>Pesquisar</button>
-      </div> */}
-
       <div className={styles.contentContainer}>
         {currentIndexState.currentIndex !== 0 && <img
           src="/images/left_arrow.svg"
