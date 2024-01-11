@@ -19,6 +19,7 @@ export default function Downloads() {
           src="images/logo.svg"
           alt="Logo Frente e Verso"
         />
+        <div className={styles.titleResponsive}>Escolha o relatório para acessar o conteúdo para download</div>
         <div className={styles.reportsList}>
           {mockReports.map((report, index) => (
             <button key={index} className={styles.reportItem}>

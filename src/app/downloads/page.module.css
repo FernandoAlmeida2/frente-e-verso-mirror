@@ -36,3 +36,43 @@
     background-color: #FF3B21;
     border: none;
   }
+
+  .titleResponsive {
+    display: none;
+  }
+
+  @media (max-width: 700px) {
+    .main {
+      padding: 10vw 0;
+    }
+    
+    .logo {
+      width: 42.9vw;
+    }
+  
+    .content {
+      gap: 8vw;
+    }
+  
+    .reportsList {
+      max-width: 47.7vw;
+      max-height: 143vw;
+      gap: 3.6vw;
+      overflow-y: scroll;
+    }
+  
+    .reportItem {
+      width: 47.7vw;
+      height: 9.33vw;
+      border-radius: 3.73vw;
+      font-size: 4.27vw;
+    }
+
+    .titleResponsive {
+      display: initial;
+      width: 72vw;
+      color: #0000FF;
+      font-size: 4.8vw;
+    }
+
+  }
