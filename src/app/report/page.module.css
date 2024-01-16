@@ -26,6 +26,10 @@
   min-height: 100vh;
 }
 
+.buttonResponsive {
+  display: none;
+}
+
 .shareText {
   font-size: 1vw;
   font-weight: 700;
@@ -44,7 +48,7 @@
 
 @media (max-width: 700px) {
   .main {
-    padding: 10vw 0;
+    padding: 10vw 0 8vw 0;
     gap: 8vw;
     flex-direction: column;
     align-items: center;
@@ -62,6 +66,9 @@
   .content {
     height: 148.3vw;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .report {
@@ -70,19 +77,29 @@
     max-height: 148.3vw;
   }
 
+  .buttonResponsive {
+    display: initial;
+    width: 47.7vw;
+    min-height: 9.33vw;
+    color: #ffffff;
+    font-size: 3.2vw;
+    background-color: #FF3B21;
+    font-size: 700;
+    border-radius: 3.73vw;
+    border: none;
+    margin-top: 6vw;
+  }
+
   .shareText {
-    font-size: 1vw;
-    font-weight: 700;
-    padding: 3vw 0 1vw 0;
+    font-size: 3.2vw;
+    padding: 5.33vw 0 2.13vw 0;
   }
 
   .iconsList {
-    display: flex;
-    align-items: center;
-    gap: 1.5vw;
+    gap: 3.8vw;
   }
 
   .icon {
-    width: 2.375vw;
+    width: 5.7vw;
   }
 }

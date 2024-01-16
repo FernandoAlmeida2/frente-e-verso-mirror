@@ -23,6 +23,7 @@ export default function Report() {
       </aside>
       <div className={styles.content}>
         <iframe src={`/data/${report}.pdf`} className={styles.report}></iframe>
+        <button className={styles.buttonResponsive}>Baixar arquivos do relatório</button>
         <div className={styles.shareText}>Compartilhe:</div>
         <div className={styles.iconsList}>
           <a

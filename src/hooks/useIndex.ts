@@ -10,24 +10,31 @@ export function useIndex() {
 
   function scrollToLeft() {
     if (currentIndex <= 0) return;
-    if (isMobile) {
+    /* if (isMobile) {
       setCurrentIndex((prev) => prev - 1);
       return;
-    }
+    } */
 
-    if (techNotes.length - currentIndex < 3) setCurrentIndex(0);
-    else setCurrentIndex((prev) => prev - 3);
+    /* if (techNotes.length - currentIndex < 4) setCurrentIndex(0);
+    else setCurrentIndex((prev) => prev - 4); */
+    setCurrentIndex((prev) => prev - 1);
+
   }
 
   function scrollToRight() {
     if (currentIndex >= techNotes.length) return;
-    if(isMobile) {
+    /* if(isMobile) {
       setCurrentIndex((prev) => prev + 1);
       return;
-    }
+    } */
 
-    if (techNotes.length - currentIndex < 3) setCurrentIndex(techNotes.length);
-    else setCurrentIndex((prev) => prev + 3);
+    //if (techNotes.length - currentIndex < 3) setCurrentIndex(techNotes.length-1);
+    //else setCurrentIndex((prev) => prev + 1);
+
+    //if (currentIndex !== techNotes.length - 3) setCurrentIndex((prev) => prev + 1)
+
+    setCurrentIndex((prev) => prev + 1)
+
   }
 
   return {
