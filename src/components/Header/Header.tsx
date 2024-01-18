@@ -22,6 +22,7 @@ export default function Header() {
         <Link href="/">Início</Link>
         <div>Sobre</div>
         <Link href="/downloads">Downloads</Link>
+        <Link href="/ficha_tecnica">Ficha Técnica</Link>
       </div>
       <label className={styles.searchBar}>
         {toggleState.toggleSearch && (

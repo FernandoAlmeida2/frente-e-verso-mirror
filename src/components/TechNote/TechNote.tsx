@@ -24,7 +24,7 @@ export default function TechNote({ techNote, noteIndex, currentIndex }: Props) {
 
   return (
     <div className={styles.container} ref={noteRef}>
-      <Link href={`/report?id=${techNote.id}`}>
+      <Link href={`/nota_tecnica?id=${techNote.id}`}>
         <img
           src={`/images/covers/${techNote.imgPath}`}
           alt="Capa Frente e Verso"

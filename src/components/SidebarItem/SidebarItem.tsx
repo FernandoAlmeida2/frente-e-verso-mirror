@@ -14,7 +14,7 @@ export default function SidebarItem({ text, pdfName }: Props) {
         src="/images/download_icon.svg"
         alt="Download"
       />
-      <a href={`data/${pdfName}.pdf`} download>{text}</a>
+      <a href={pdfName} download>{text}</a>
     </div>
   );
 }

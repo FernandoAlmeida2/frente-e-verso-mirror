@@ -12,18 +12,20 @@ export default function Report() {
   return (
     <main className={styles.main}>
       <img
-          className={styles.logoResponsive}
-          src="images/logo.svg"
-          alt="Logo Frente e Verso"
-        />
+        className={styles.logoResponsive}
+        src="images/logo.svg"
+        alt="Logo Frente e Verso"
+      />
       <aside className={styles.sidebar}>
         <SidebarItem text={"Gráficos do relatório"} pdfName={report} />
         <SidebarItem text={"Códigos utilizados"} pdfName={report} />
         <SidebarItem text={"Relatório em PDF"} pdfName={report} />
       </aside>
       <div className={styles.content}>
-        <iframe src={`/data/${report}.pdf`} className={styles.report}></iframe>
-        <button className={styles.buttonResponsive}>Baixar arquivos do relatório</button>
+        <iframe src={report} className={styles.report}></iframe>
+        <button className={styles.buttonResponsive}>
+          Baixar arquivos do relatório
+        </button>
         <div className={styles.shareText}>Compartilhe:</div>
         <div className={styles.iconsList}>
           <a
