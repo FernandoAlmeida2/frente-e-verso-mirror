@@ -23,7 +23,11 @@ export default function Footer() {
           <img src="/images/iplanfor.png" alt="Iplanfor" />
           <img src="/images/prefeitura.png" alt="Prefeitura" />
         </div>
-        <img src="/images/colaboradores.png" alt="Colaboradores" />
+        <div className={styles.collaborators}>
+          <img src="/images/logo_desigualLab.svg" alt="Desigual Lab" className={styles.colabLogo} />
+          <img src="/images/logo_whatworkcities.svg" alt="What Work Cities Certification" className={styles.colabLogo} />
+          <img src="/images/colaboradores.png" alt="Colaboradores" />
+        </div>
       </div>
       <div className={styles.footerResponsive}>
         <Link href="/" className={styles.footerIcon}>

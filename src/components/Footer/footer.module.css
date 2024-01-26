@@ -32,6 +32,16 @@
   gap: 1.5vw;
 }
 
+.collaborators {
+  display: flex;
+  gap: 1.5vw;
+  align-items: center;
+}
+
+.colabLogo {
+  height: 4.1275vw;
+}
+
 .footerResponsive {
   display: none;
 }

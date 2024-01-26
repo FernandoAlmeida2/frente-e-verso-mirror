@@ -132,3 +132,6 @@ const techNotes: TechnicalNote[] = [
 ];
 
 export default techNotes;
+
+
+// ods_url, cover_url, pdf_url, code_url, zip_url
