@@ -1,25 +1,34 @@
-import { NextApiRequest } from "next";
+import { FormData } from "@/app/fale_conosco/page";
 
-export async function POST(Request: NextApiRequest) {
-
-  let nodemailer = require('nodemailer');
+export async function POST(Request: Request) {
+  let nodemailer = require("nodemailer");
+  const formData = await Request.json();
 
   const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
+    host: process.env.MAIL_HOST,
+    port: process.env.MAIL_PORT,
     auth: {
-      user: 'demo@demo.gmail',
-      pass: 'password',
+      user: process.env.MAIL_USERNAME,
+      pass: process.env.MAIL_PASSWORD,
     },
-    secure: true,
-  })
+    secure: false,
+  });
 
-  return new Response(`Welcome to my Next application, user: ${Request.body}`, {
+  const mailData = {
+    from: formData.email,
+    to: "observatoriodefortaleza@iplanfor.fortaleza.ce.gov.br",
+    subject: `Mensagem do usuário ${formData.name} (Frente e Verso)`,
+    html: `<div>${formData.message}</div><p>Enviado de:
+    ${formData.email}</p>`,
+  };
+
+  transporter.sendMail(mailData, function (err: Error) {
+    if (err) console.log(err);
+  });
+
+  return new Response("Mensagem enviada com sucesso!", {
     status: 200,
   });
-  //res.status(200).json(req.body)
-  //console.log(req.body)
-  console.log("ok");
 }
 
 /* export async function GET(Request: NextApiRequest) {

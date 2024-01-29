@@ -1,16 +1,21 @@
 "use client";
 
 import styles from "./page.module.css";
-import { ChangeEvent, Dispatch, FormEvent, SetStateAction, useState } from "react";
+import {
+  ChangeEvent,
+  Dispatch,
+  FormEvent,
+  SetStateAction,
+  useState,
+} from "react";
 
-type FormData = {
+export type FormData = {
   name: string;
   email: string;
   message: string;
 };
 
 export default function FaleConosco() {
-
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData]: [
     FormData,
@@ -21,7 +26,9 @@ export default function FaleConosco() {
     message: "",
   });
 
-  function handleInput(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  function handleInput(
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) {
     setFormData((prevState) => ({
       ...prevState,
       [event.target.name]: event.target.value,
@@ -30,25 +37,24 @@ export default function FaleConosco() {
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    fetch('/api/contact', {
-      method: 'POST',
+    fetch("/api/contact", {
+      method: "POST",
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     }).then((res) => {
-      console.log(res)
       if (res.status === 200) {
-        console.log('Response succeeded!')
-        setSubmitted(true)
+        console.log("Response succeeded!");
+        setSubmitted(true);
         setFormData({
           name: "",
           email: "",
           message: "",
-        })
+        });
       }
-    })
+    });
   }
 
   return (
@@ -62,6 +68,7 @@ export default function FaleConosco() {
             id="name"
             name="name"
             className={styles.formControl}
+            value={formData.name}
             placeholder="Escreva seu nome"
             onChange={handleInput}
             required
@@ -73,6 +80,7 @@ export default function FaleConosco() {
             id="email"
             name="email"
             placeholder="Escreva seu e-mail"
+            value={formData.email}
             className={styles.formControl}
             onChange={handleInput}
             required
@@ -83,6 +91,7 @@ export default function FaleConosco() {
             name="message"
             className={styles.formControl}
             placeholder="Sua mensagem..."
+            value={formData.message}
             onChange={handleInput}
             required
           ></textarea>
