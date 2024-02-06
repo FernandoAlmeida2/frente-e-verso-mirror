@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prod": "next export"
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.14",
@@ -15,7 +16,8 @@
     "nodemailer": "^6.9.8",
     "react": "^18",
     "react-dom": "^18",
-    "react-responsive": "^9.0.2"
+    "react-responsive": "^9.0.2",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -26,7 +26,7 @@ export default function Header() {
         <Link href="/fale_conosco">Fale Conosco</Link>
       </div>
       <label className={styles.searchBar}>
-        {toggleState.toggleSearch && (
+        {(
           <input
             className={styles.searchInput}
             value={valueSearch}

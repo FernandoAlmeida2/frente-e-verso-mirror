@@ -5,4 +5,5 @@ export type TechnicalNote = {
     ods: string;
     imgPath: string;
     pdfName: string;
+    category: string;
 }

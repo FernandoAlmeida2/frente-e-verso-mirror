@@ -7,7 +7,8 @@ const techNotes: TechnicalNote[] = [
     year: "2023",
     ods: "SDG-16.svg",
     imgPath: "Serie_Historica_Homicidios_2010_2021.png",
-    pdfName: "/data/A-violência-epidêmica-Fortaleza-12-anos-história-foco-territórios.pdf" 
+    pdfName: "/data/A-violência-epidêmica-Fortaleza-12-anos-história-foco-territórios.pdf",
+    category: "Segurança"
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ const techNotes: TechnicalNote[] = [
     year: "2023",
     ods: "SDG-12.svg",
     imgPath: "IPCA_CAFE_DA_MANHA.png",
-    pdfName: "/data/Variação-preços-gêneros-alimentícios-básicos-Fortaleza.pdf"
+    pdfName: "/data/Variação-preços-gêneros-alimentícios-básicos-Fortaleza.pdf",
+    category: "Economia"
   },
   {
     id: 3,
@@ -23,7 +25,8 @@ const techNotes: TechnicalNote[] = [
     year: "2023",
     ods: "SDG-10.svg",
     imgPath: "Percentual-de-domicílios-em-aglomerados-subnormais-por-capital-nordestina-2019.png",
-    pdfName: "/data/Habitação-Fortaleza-entre-diagnóstico-desigualdades-direitos-cidade.pdf"
+    pdfName: "/data/Habitação-Fortaleza-entre-diagnóstico-desigualdades-direitos-cidade.pdf",
+    category: "Infraestrutura"
   },
   {
     id: 4,
@@ -31,7 +34,8 @@ const techNotes: TechnicalNote[] = [
     year: "2023",
     ods: "SDG-11.svg",
     imgPath: "populacao-capitais-nordeste.png",
-    pdfName: "/data/A-demanda-territorial-ao-serviço-de-esgotamento-sanitario-acesso-universal-e-equidade.pdf"
+    pdfName: "/data/A-demanda-territorial-ao-serviço-de-esgotamento-sanitario-acesso-universal-e-equidade.pdf",
+    category: "Infraestrutura"
   },
   {
     id: 5,
@@ -39,7 +43,8 @@ const techNotes: TechnicalNote[] = [
     year: "2023",
     ods: "SDG-10.svg",
     imgPath: "infografico-pop-situacao-rua.png",
-    pdfName: "/data/Perfil-população-situação-rua-cidade-Fortaleza.pdf"
+    pdfName: "/data/Perfil-população-situação-rua-cidade-Fortaleza.pdf",
+    category: "Infraestrutura"
   },
   {
     id: 6,
@@ -47,7 +52,8 @@ const techNotes: TechnicalNote[] = [
     year: "2023",
     ods: "SDG-8.svg",
     imgPath: "DISTRIBUICAO_CNPJS_ATIVOS_FORTALEZA_2023-02-27.png",
-    pdfName: "/data/Distribuição-territorial-empreendedores-formais.pdf"
+    pdfName: "/data/Distribuição-territorial-empreendedores-formais.pdf",
+    category: "Economia"
   },
   {
     id: 7,
@@ -55,7 +61,8 @@ const techNotes: TechnicalNote[] = [
     year: "2023",
     ods: "SDG-12.svg",
     imgPath: "exportacoes_fortaleza_2012.png",
-    pdfName: "/data/Comércio-exterior-Fortaleza-fluxo-financeiro-importacoes-exportacoes.pdf"
+    pdfName: "/data/Comércio-exterior-Fortaleza-fluxo-financeiro-importacoes-exportacoes.pdf",
+    category: "Economia"
   },
   {
     id: 8,
@@ -63,7 +70,8 @@ const techNotes: TechnicalNote[] = [
     year: "2023",
     ods: "SDG-9.svg",
     imgPath: "default_cover.svg",
-    pdfName: "/data/Inteligência-artificial-políticas-públicas-combates-desigualdades-Fortaleza.pdf"
+    pdfName: "/data/Inteligência-artificial-políticas-públicas-combates-desigualdades-Fortaleza.pdf",
+    category: "Tecnologia"
   },
   {
     id: 9,
@@ -71,7 +79,8 @@ const techNotes: TechnicalNote[] = [
     year: "2022",
     ods: "SDG-3.svg",
     imgPath: "capitais_nordeste.png",
-    pdfName: "https://drive.google.com/file/d/14g1TErytXkSj7yzvlx_3h1NyqU09exPI/preview"
+    pdfName: "https://drive.google.com/file/d/14g1TErytXkSj7yzvlx_3h1NyqU09exPI/preview",
+    category: "Saúde"
   },
   {
     id: 10,
@@ -79,7 +88,8 @@ const techNotes: TechnicalNote[] = [
     year: "2022",
     ods: "SDG-6.svg",
     imgPath: "2021_rede_esgoto_fortaleza.png",
-    pdfName: "/data/A-demanda-territorial-ao-serviço-de-esgotamento-sanitario-acesso-universal-e-equidade.pdf"
+    pdfName: "/data/A-demanda-territorial-ao-serviço-de-esgotamento-sanitario-acesso-universal-e-equidade.pdf",
+    category: "Infraestrutura"
   },
   {
     id: 11,
@@ -87,7 +97,8 @@ const techNotes: TechnicalNote[] = [
     year: "2022",
     ods: "SDG-3.svg",
     imgPath: "prostata.png",
-    pdfName: "/data/Câncer-de-próstata-características-impasses-e-desafios-nas-políticas-públicas-de-Fortaleza.pdf"
+    pdfName: "/data/Câncer-de-próstata-características-impasses-e-desafios-nas-políticas-públicas-de-Fortaleza.pdf",
+    category: "Saúde"
   },
   {
     id: 12,
@@ -95,7 +106,8 @@ const techNotes: TechnicalNote[] = [
     year: "2022",
     ods: "SDG-10.svg",
     imgPath: "default_cover.svg",
-    pdfName: "/data/Uso de evidências na formulação, adaptação e avaliação de políticas públicas.pdf"
+    pdfName: "/data/Uso de evidências na formulação, adaptação e avaliação de políticas públicas.pdf",
+    category: "Tecnologia"
   },
   {
     id: 13,
@@ -103,7 +115,8 @@ const techNotes: TechnicalNote[] = [
     year: "2022",
     ods: "SDG-10.svg",
     imgPath: "desigual-lab.png",
-    pdfName: ""
+    pdfName: "",
+    category: "Tecnologia"
   },
   {
     id: 14,
@@ -111,7 +124,8 @@ const techNotes: TechnicalNote[] = [
     year: "2022",
     ods: "SDG-10.svg",
     imgPath: "gravidez-adolescencia.png",
-    pdfName: ""
+    pdfName: "",
+    category: "Saúde"
   },
   {
     id: 15,
@@ -119,7 +133,8 @@ const techNotes: TechnicalNote[] = [
     year: "2022",
     ods: "SDG-4.svg",
     imgPath: "PúblicaIdebFortaleza.png",
-    pdfName: ""
+    pdfName: "",
+    category: "Educação"
   },
   {
     id: 16,
@@ -127,7 +142,8 @@ const techNotes: TechnicalNote[] = [
     year: "2022",
     ods: "SDG-4.svg",
     imgPath: "ideb-2021.png",
-    pdfName: ""
+    pdfName: "",
+    category: "Educação"
   },
 ];
 
