@@ -23,23 +23,23 @@ export default function TechNote({ techNote, noteIndex, currentIndex }: Props) {
   }
 
   return (
-    <div className={styles.container} ref={noteRef}>
-      <Link href={`/nota_tecnica?id=${techNote.id}`}>
-        <img
+    <div ref={noteRef}>
+      {/* <img
           src={`/images/covers/${techNote.imgPath}`}
           alt="Capa Frente e Verso"
           className={styles.coverImg}
-        />
+        /> */}
+      <Link href={`/nota_tecnica?id=${techNote.id}`} className={styles.container}>
+        <div className={styles.title}>{techNote.title}</div>
+        <div className={styles.info}>
+          {techNote.year}
+          <img
+            src={`/images/logos_ods/${techNote.ods}`}
+            alt="Capa Frente e Verso"
+            className={styles.odsImg}
+          />
+        </div>
       </Link>
-      <div className={styles.title}>{techNote.title}</div>
-      <div className={styles.info}>
-        {techNote.year}
-        <img
-          src={`/images/logos_ods/${techNote.ods}`}
-          alt="Capa Frente e Verso"
-          className={styles.odsImg}
-        />
-      </div>
     </div>
   );
 }

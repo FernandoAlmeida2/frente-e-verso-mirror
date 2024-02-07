@@ -10,6 +10,9 @@ import SearchContext from "@/contexts/SearchContext";
 export default function Home() {
   const currentIndexState = useIndex();
   const searchState = useContext(SearchContext);
+  const categoryList = techNotes
+    .map((technote) => technote.category)
+    .filter((value, index, array) => array.indexOf(value) === index);
 
   return (
     <main className={styles.main}>
@@ -36,16 +39,21 @@ export default function Home() {
                 onClick={() => currentIndexState.scrollToLeft()}
               />
             )} */}
-          <div className={styles.content}>
-            {searchState?.searchState.techNotesList.map((techNote, index) => (
-              <TechNote
-                key={index}
-                techNote={techNote}
-                currentIndex={currentIndexState.currentIndex}
-                noteIndex={index}
-              />
-            ))}
-          </div>
+          {categoryList.map((category, index) => (
+            <div className={styles.contentCol} key={index}>
+              <div>{category}</div>
+              {searchState?.searchState.techNotesList
+                .filter((techNote) => techNote.category === category)
+                .map((techNote, index) => (
+                  <TechNote
+                    key={index}
+                    techNote={techNote}
+                    currentIndex={currentIndexState.currentIndex}
+                    noteIndex={index}
+                  />
+                ))}
+            </div>
+          ))}
           {/* {currentIndexState.currentIndex < techNotes.length - 3 &&
             searchState?.searchState.techNotesList.length !== 1 && (
               <img
