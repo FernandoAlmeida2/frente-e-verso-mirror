@@ -16,13 +16,14 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      {searchState?.searchState.techNotesList.length === techNotes.length && (
+      {searchState?.searchState.techNotesList.length !== 0 && (
         <div className={styles.presentation}>
           <div className={styles.description}>
             <div>
-              Nonononon onononono nononono nononononono no nono nononono
-              nononononononononono. Nono nononononono nonononononono nononono no
-              nonononononono no nono nonononono nono.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus, lectus ac consectetur 
+            mattis, elit ante condimentum augue, ac tempor quam turpis a urna. Vestibulum ante ipsum primis 
+            in faucibus orci luctus et ultrices posuere cubilia curae; Fusce vitae ornare mi, sit amet 
+            venenatis arcu.
             </div>
             <button className={styles.moreButton}>Saiba Mais</button>
           </div>
@@ -65,6 +66,13 @@ export default function Home() {
             )} */}
         </div>
       )}
+      {
+        searchState?.searchState.techNotesList.length === 0 && (
+            <div className={styles.description}>
+                Nenhum registro encontrado!
+            </div>
+        )
+      }
     </main>
   );
 }
